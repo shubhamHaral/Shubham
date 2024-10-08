@@ -1,0 +1,116 @@
+/* TransactionsPage.css */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0; /* Reset margin */
+    padding: 20px; /* Padding around the body */
+    background-color: #f4f7f8; /* Light background for contrast */
+}
+
+h1, h2 {
+    color: #333;
+    margin-bottom: 20px; /* Space below headings */
+}
+
+.table-container {
+    margin-bottom: 30px; /* Added space below table */
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px; /* Space below table */
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 10px; /* Increased padding for better readability */
+    text-align: left;
+}
+
+th {
+    background-color: #007bff;
+    color: white;
+}
+
+button {
+    margin: 5px; /* Space around buttons */
+    padding: 10px 15px; /* Padding for button */
+    border: none;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+.stats {
+    border: 1px solid #ddd;
+    padding: 15px; /* Increased padding for stats box */
+    background-color: #f9f9f9;
+    margin-bottom: 20px; /* Space below stats box */
+}
+
+.chart-container {
+    margin-top: 30px; /* Added space above chart */
+}
+
+.bar-chart {
+    display: flex;
+    justify-content: space-around; /* Even space around bars */
+    align-items: flex-end;
+    height: 300px; /* Adjust as needed */
+    margin-top: 20px;
+    border-left: 2px solid #ccc; /* Optional left border */
+    padding-left: 10px; /* Padding for bar alignment */
+    background-color: #fff; /* White background for contrast */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Soft shadow */
+    padding-bottom: 10px; /* Padding below the bars */
+}
+
+.bar {
+    width: 50px; /* Width of each bar */
+    background-color: #4bc0c0; /* Base bar color */
+    position: relative;
+    transition: transform 0.3s ease-in-out, background-color 0.3s; /* Animation effects */
+}
+
+.bar:hover {
+    background-color: #36a2eb; /* Change color on hover */
+    transform: translateY(-5px); /* Slight lift effect */
+}
+
+.bar-label {
+    position: absolute;
+    bottom: -25px; /* Position the label below the bar */
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 12px;
+    color: #333;
+    font-weight: bold; /* Make label bold */
+}
+
+.bar-value {
+    position: absolute;
+    bottom: 100%; /* Position the value above the bar */
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 14px; /* Slightly larger for visibility */
+    color: white; /* Contrast against bar color */
+    font-weight: bold;
+    margin-bottom: 5px; /* Space between value and bar */
+    transition: opacity 0.3s; /* Fade effect */
+    opacity: 0; /* Initially hidden */
+}
+
+.bar:hover .bar-value {
+    opacity: 1; /* Show value on hover */
+}
